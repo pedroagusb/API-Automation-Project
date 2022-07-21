@@ -1,0 +1,17 @@
+Pasos necesarios para correr el proyecto de Automation:
+- Tener instalados Java JDK 11 o superior. Revisar desde el terminal con > java -version
+- Tener instalado Maven. Para revisar, desde el terminar con > mvn -v
+- Tener instalada la ultima version de IntelliJ
+- Ingresar a Preferencias de IntelliJ y en el Path: Build, Execution, Deployment > Build Tools > Maven. Verificar que en "Maven home path" este seleccionado la opcion "Bundled (Maven 3)".
+- Ingresar a Preferencias de IntelliJ y en el Path: Build, Execution, Deployment > Build Tools > Maven > Importing y  verificar que las opciones Sources, Documentations and Annotations esten seleccionadas.
+- Ingresar a Project Structure en Project, verificar que:
+    - El SDK sea: corretto-11
+    - Language Level sea: 11
+- Ingresar a Project Structure en Modules, verificar que Language level sea: 11
+- Dentro de IntelliJ ubicar el archivo pom.xml, darle click derecho. Ingresar a la opcion Maven > Generate Sources and Update Folders. Esto permitira cargar localmente todas las librerias descriptas en el archivo pom para poder ejecutar el proyecto.
+- Dentro del proyecto, ubicar el archivo TestRunner, ejecutar la clase ubicada en la linea 16. Esto permitira ejecutar los casos de pruebas.
+
+- Para ejecutar a traves de CMD, posicionarse sobre el proyecto y ejecutar: mvn clean install site
+- El reporte de la ejecucion se encontrara en Target > site > Report.html
+
+- NOTA: debido a que no se tiene la posibilidad de eliminar usuarios en la pagina Web https://www.demoblaze.com/index.html, para que el TC no falle una vez que se ha ejecutado, se tiene que modificar el Username del archivo credentials.properties

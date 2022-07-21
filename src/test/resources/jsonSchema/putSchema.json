@@ -1,0 +1,74 @@
+{
+  "title": "Root Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "category",
+    "name",
+    "photoUrls",
+    "tags",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "title": "The id Schema",
+      "type": "integer"
+    },
+    "category": {
+      "title": "The category Schema",
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "title": "The id Schema",
+          "type": "integer"
+        },
+        "name": {
+          "title": "The name Schema",
+          "type": "string"
+        }
+      }
+    },
+    "name": {
+      "title": "The name Schema",
+      "type": "string"
+    },
+    "photoUrls": {
+      "title": "The photoUrls Schema",
+      "type": "array",
+      "items": {
+        "title": "A Schema",
+        "type": "string"
+      }
+    },
+    "tags": {
+      "title": "The tags Schema",
+      "type": "array",
+      "items": {
+        "title": "A Schema",
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "title": "The id Schema",
+            "type": "integer"
+          },
+          "name": {
+            "title": "The name Schema",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "title": "The status Schema",
+      "type": "string"
+    }
+  }
+}

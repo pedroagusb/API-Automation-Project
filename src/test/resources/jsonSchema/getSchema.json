@@ -1,0 +1,132 @@
+{
+  "title": "Root Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "category",
+    "name",
+    "photoUrls",
+    "tags",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "title": "The id Schema",
+      "type": "integer",
+      "examples": [
+        100
+      ]
+    },
+    "category": {
+      "title": "The category Schema",
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "title": "The id Schema",
+          "type": "integer",
+          "examples": [
+            0
+          ]
+        },
+        "name": {
+          "title": "The name Schema",
+          "type": "string",
+          "examples": [
+            "string"
+          ]
+        }
+      },
+      "examples": [{
+        "id": 0,
+        "name": "string"
+      }]
+    },
+    "name": {
+      "title": "The name Schema",
+      "type": "string",
+      "examples": [
+        "doggie"
+      ]
+    },
+    "photoUrls": {
+      "title": "The photoUrls Schema",
+      "type": "array",
+      "items": {
+        "title": "A Schema",
+        "type": "string",
+        "examples": [
+          "string"
+        ]
+      },
+      "examples": [
+        [
+          "string"]
+      ]
+    },
+    "tags": {
+      "title": "The tags Schema",
+      "type": "array",
+      "items": {
+        "title": "A Schema",
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "title": "The id Schema",
+            "type": "integer",
+            "examples": [
+              0
+            ]
+          },
+          "name": {
+            "title": "The name Schema",
+            "type": "string",
+            "examples": [
+              "string"
+            ]
+          }
+        },
+        "examples": [{
+          "id": 0,
+          "name": "string"
+        }]
+      },
+      "examples": [
+        [{
+          "id": 0,
+          "name": "string"
+        }]
+      ]
+    },
+    "status": {
+      "title": "The status Schema",
+      "type": "string",
+      "examples": [
+        "available"
+      ]
+    }
+  },
+  "examples": [{
+    "id": 100,
+    "category": {
+      "id": 0,
+      "name": "string"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [{
+      "id": 0,
+      "name": "string"
+    }],
+    "status": "available"
+  }]
+}
